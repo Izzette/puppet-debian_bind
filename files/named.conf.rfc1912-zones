@@ -1,0 +1,23 @@
+# /etc/bind/named.conf.rfc1912-zones
+
+zone "0.in-addr.arpa" IN {
+    type master;
+    file "/etc/bind/db.0";
+};
+
+zone "127.in-addr.arpa" IN {
+    type master;
+    file "/etc/bind/db.127";
+};
+
+zone "255.in-addr.arpa" IN {
+    type master;
+    file "/etc/bind/db.255";
+};
+
+zone "localhost" IN {
+    type master;
+    file "/etc/bind/db.local";
+};
+
+# vim: set ts=4 sw=4 et syn=named:

@@ -1,0 +1,45 @@
+{
+  "name": "bodhi-debian_bind",
+  "version": "0.1.0",
+  "author": "bodhi",
+  "summary": "Wrapper for \"thias-bind\" puppet module to ease poor Debian/Ubuntu support.",
+  "license": "Apache-2.0",
+  "source": "https://github.com/bodhidigital/puppet-debian_bind",
+  "project_page": "https://github.com/bodhidigital/puppet-debian_bind",
+  "issues_url": "https://github.com/bodhidigital/puppet-debian_bind/issues",
+  "dependencies": [
+    {
+      "name": "puppetlabs-stdlib",
+      "version_requirement": ">= 1.0.0"
+    },
+    {
+      "name": "thias-bind",
+      "version_requirement": ">= 0.5.2 < 0.6.0"
+    }
+  ],
+  "requirements": [
+    {
+      "name": "puppet",
+      "version_requirement": ">= 4.0.0 < 5.0.0"
+    }
+  ],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "Debian",
+      "operatingsystemrelease": [
+        "7",
+        "8"
+      ]
+    },
+    {
+      "operatingsystem": "Ubuntu",
+      "operatingsystemrelease": [
+        "12.04",
+        "14.04",
+        "16.04"
+      ]
+    }
+  ],
+  "data_provider": null
+}
+
