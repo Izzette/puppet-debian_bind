@@ -59,14 +59,17 @@ class debian_bind (
   $packagename      = "$packagenameprefix$::bind::packagenamesuffix"
   $servicename_full = "$servicename$::bind::servicenamesuffix"
 
-  ensure_resource('file', $directory, {
-    ensure  => directory,
-    owner   => $binduser,
-    group   => $bindgroup,
-    mode    => '0750',
-    require => Package[$packagename],
-    notify  => Service[$servicename_full],
-  })
+  if (!defined(File[$directory])) {
+    file { "$directory":
+      ensure  => directory,
+      owner   => $binduser,
+      group   => $bindgroup,
+      mode    => '0750',
+      require => Package[$packagename],
+      notify  => Service[$servicename_full],
+    }
+  }
+
   file { "$directory/named.ca":
     ensure  => link,
     target  => '/etc/bind/db.root',

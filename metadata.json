@@ -9,10 +9,6 @@
   "issues_url": "https://github.com/bodhidigital/puppet-debian_bind/issues",
   "dependencies": [
     {
-      "name": "puppetlabs-stdlib",
-      "version_requirement": ">= 1.0.0"
-    },
-    {
       "name": "thias-bind",
       "version_requirement": ">= 0.5.2 < 0.6.0"
     }
