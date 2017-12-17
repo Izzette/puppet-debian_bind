@@ -113,7 +113,7 @@ class debian_bind (
     dnssec_lookaside        => $dnssec_lookaside,
     zones                   => $zones,
     keys                    => $keys,
-    includes                => $includes,
+    includes                => concat($includes, '/etc/bind/bind.keys'),
     views                   => $views,
     managed_keys_directory  => $managed_keys_directory,
     hostname                => $hostname,
